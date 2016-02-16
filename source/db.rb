@@ -6,5 +6,5 @@ gem 'sqlite3'
 require 'sqlite3'
 
 database_file = "address_book.sqlite3"
-$db = SQLite3::Database.new(database_file)
+$db = SQLite3::Database.open(database_file)
 $db.results_as_hash = true
